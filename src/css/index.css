@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+
+  .App {
+    @apply min-h-screen bg-solink-wine
+  }
+
+  .h3 {
+    @apply text-lg lg:text-xl text-solink-nyanza
+  }
+
+  .navbar {
+    @apply flex items-center justify-between bg-solink-wine
+  }
+  .navbar .navbar-link a {
+    @apply text-solink-nyanza
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,5 +33,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
