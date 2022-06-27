@@ -1,9 +1,5 @@
 @import "./index.css";
 
-.App {
-  background-color: theme('colors.solink-wine');
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,3 +34,4 @@
     transform: rotate(360deg);
   }
 }
+
