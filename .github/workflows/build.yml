@@ -31,5 +31,5 @@ jobs:
       run: |
         npm run build
 
-    - name: Run the tests
-      run: npm test --passWithNoTests
+    #- name: Run the tests
+    # run: npm test --passWithNoTests
