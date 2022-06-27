@@ -14,6 +14,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
+        fail-fast: false
 
     steps:
     - name: Checkout repository
@@ -32,4 +33,4 @@ jobs:
         npm run build
 
     - name: Run the tests
-      run: npm test
+      run: npm test --passWithNoTests
