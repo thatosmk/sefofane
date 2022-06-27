@@ -30,7 +30,6 @@ jobs:
     - name: Build
       run: |
         npm run build
-        npm run build:css
 
     - name: Run the tests
       run: npm test
