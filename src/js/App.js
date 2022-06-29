@@ -5,6 +5,7 @@ import React, { lazy } from 'react';
 
 
 const LaunchData = lazy(() => import('./launch_data'));
+const Launches   = lazy(() => import('./components/launches'));
 
 function App() {
   return (
@@ -17,14 +18,7 @@ function App() {
       </nav>
       <header className="hero">
         <LaunchData/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Launches size={10} />
       </header>
     </div>
   );

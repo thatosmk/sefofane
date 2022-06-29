@@ -19,7 +19,7 @@
   @apply text-lg lg:text-xl text-solink-nyanza
 }
 .h1 {
-  @apply text-3xl lg:text-5xl text-solink-blue font-extrabold
+  @apply text-3xl lg:text-5xl text-solink-blue font-extrabold my-4
 }
 
 .navbar {
@@ -34,7 +34,17 @@
 }
 
 .hero {
-  @apply bg-solink-nyanza flex items-center justify-between h-screen
+  @apply bg-solink-nyanza flex flex-col mx-auto text-center pb-24
+}
+
+.table {
+  @apply max-w-full py-4 text-center mx-auto
+}
+.thead {
+  @apply bg-solink-green text-solink-nyanza text-center
+}
+.tbody td {
+  @apply whitespace-nowrap px-3 py-4 text-sm
 }
 
 .App-link {
