@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -f ./dist/output.css
+npx tailwindcss -i ./src/css/index.css -o ./dist/output.css
