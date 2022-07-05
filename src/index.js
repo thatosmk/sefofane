@@ -1,26 +1,29 @@
 import React, { Suspense, lazy } from 'react';
-import ReactDOM from 'react-dom/client';
+import { apolloClient } from './js/apollo_client';
+import { ApolloProvider } from '@apollo/client';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-
+import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './css/index.css';
 
-const App = lazy(() => import('./App'));
+const App = lazy(() => import('./js/App'));
 const PastLaunches = lazy(() => import('./routes/past_launches'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<App />} />
-          <Route path="/pastLaunches" element={<PastLaunches />} />
-      </Routes>
-    </Suspense>
+    <ApolloProvider client={apolloClient}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<App />} />
+            <Route path="/pastLaunches" element={<PastLaunches />} />
+        </Routes>
+      </Suspense>
+    </ApolloProvider>
   </BrowserRouter>
 );
 

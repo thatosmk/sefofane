@@ -11,19 +11,44 @@
   }
 }
 
-.App-header {
-  background-color: theme('colors.solink-wine');
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-container{
+  @apply min-h-screen
+}
+
+.h3 {
+  @apply text-lg lg:text-xl text-solink-nyanza
+}
+.h1 {
+  @apply text-3xl lg:text-5xl text-solink-blue font-extrabold my-4
+}
+
+.navbar {
+  @apply flex items-center justify-between bg-solink-green h-16
+}
+.navbar-link {
+  @apply text-solink-nyanza font-semibold mx-2
+}
+
+.text--error {
+  @apply text-solink-rose
+}
+
+.hero {
+  @apply bg-solink-nyanza flex flex-col mx-auto text-center pb-24
+}
+
+.table {
+  @apply max-w-full py-4 text-center mx-auto
+}
+.thead {
+  @apply bg-solink-green text-solink-nyanza text-center
+}
+.tbody td {
+  @apply whitespace-nowrap px-3 py-4 text-sm
 }
 
 .App-link {
-  color: theme('colors.solink-nyanza');
+  color: theme('colors.solink-blue');
 }
 
 @keyframes App-logo-spin {
@@ -34,4 +59,3 @@
     transform: rotate(360deg);
   }
 }
-
